@@ -5,8 +5,7 @@ import com.game.rockpaperscissors.strategy.PaperStrategy;
 import com.game.rockpaperscissors.strategy.RandomStrategy;
 import junit.framework.TestCase;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by 212457624 on 10.09.2016.
@@ -22,12 +21,22 @@ public class PlayerTest extends TestCase {
             assertEquals(Moves.PAPER,player.makeMove());
         }
     }
+
+    /**
+     * testing distribution of random move strategy player.
+     */
     public void testPlayerRandom(){
         Player player= new Player(new RandomStrategy());
-        Set<Moves> moves = new HashSet<>();
+        Map<Moves,Integer> moves = new HashMap<>();
         for(int i=0;i<100;i++){
-            moves.add(player.makeMove());
+            final Moves move = player.makeMove();
+            moves.putIfAbsent(move,0);
+            moves.put(move,moves.get(move)+1);
         }
         assertEquals(3,moves.size());
+        moves.forEach((k,v)->{
+            assertTrue(v<50);
+            assertTrue(v>20);
+        });
     }
 }

@@ -36,7 +36,7 @@ public class PlayerTest extends TestCase {
         assertEquals(3,moves.size());
         moves.forEach((k,v)->{
             assertTrue(v<50);
-            assertTrue(v>20);
+            assertTrue(v>10);
         });
     }
 }

@@ -5,14 +5,15 @@ import com.game.rockpaperscissors.judge.Winner;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Created by 212457624 on 05.09.2016.
  */
 public class Scoreboard {
-    private Map<Winner,Integer> board;
+    private volatile Map<Winner,Integer> board;
     public Scoreboard(){
-        board=new HashMap<>();
+        board=new ConcurrentHashMap<>();
     }
     public synchronized void addWinner(Winner winner){
         board.putIfAbsent(winner,0);

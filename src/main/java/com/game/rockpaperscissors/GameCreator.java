@@ -25,7 +25,7 @@ public class GameCreator {
             executor.execute(worker);
         }
         executor.shutdown();
-        while (!executor.awaitTermination(10L, TimeUnit.MINUTES));
+        executor.awaitTermination(10L, TimeUnit.MINUTES);
         return board;
     }
 

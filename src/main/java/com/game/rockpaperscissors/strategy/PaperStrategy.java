@@ -7,7 +7,7 @@ import com.game.rockpaperscissors.judge.Moves;
  */
 public class PaperStrategy implements IStrategy {
     @Override
-    public Moves play() {
+    public Moves makeMove() {
         return Moves.PAPER;
     }
 }

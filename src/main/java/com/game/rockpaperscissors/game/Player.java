@@ -13,6 +13,6 @@ public class Player {
         this.strategy = strategy;
     }
     public Moves makeMove(){
-        return strategy.play();
+        return strategy.makeMove();
     }
 }

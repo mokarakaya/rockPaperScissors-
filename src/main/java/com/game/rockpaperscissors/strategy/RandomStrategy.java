@@ -18,7 +18,7 @@ public class RandomStrategy implements IStrategy {
     }
 
     @Override
-    public Moves play() {
+    public Moves makeMove() {
         return moves[random.nextInt(moves.length)];
     }
 }

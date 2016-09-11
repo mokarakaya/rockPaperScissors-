@@ -1,7 +1,6 @@
 package com.game.rockpaperscissors.game.player;
 
 import com.game.rockpaperscissors.strategy.IStrategy;
-import com.game.rockpaperscissors.strategy.PaperStrategy;
 
 /**
  * Created by p.bell on 11.09.2016.

@@ -8,7 +8,6 @@ import com.game.rockpaperscissors.strategy.IStrategy;
  */
 public class Player {
     private final IStrategy strategy;
-
     public Player(IStrategy strategy) {
         this.strategy = strategy;
     }

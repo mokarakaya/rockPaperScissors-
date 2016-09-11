@@ -1,6 +1,6 @@
 package com.game.rockpaperscissors;
 
-import com.game.rockpaperscissors.game.player.Player;
+import com.game.rockpaperscissors.game.GameCreator;
 import com.game.rockpaperscissors.game.Scoreboard;
 import com.game.rockpaperscissors.game.player.PlayerFactory;
 import com.game.rockpaperscissors.strategy.PaperStrategy;

@@ -1,9 +1,6 @@
 package com.game.rockpaperscissors.game;
 
 import com.game.rockpaperscissors.judge.Winner;
-
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 

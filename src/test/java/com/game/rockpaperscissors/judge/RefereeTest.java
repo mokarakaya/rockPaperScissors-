@@ -1,12 +1,17 @@
 package com.game.rockpaperscissors.judge;
 
 import junit.framework.TestCase;
+import org.junit.Rule;
+import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 /**
  * Created by mokarakaya on 11.09.2016.
  */
 public class RefereeTest extends TestCase {
 
+    @Rule
+    public final ExpectedException exception = ExpectedException.none();
     /**
      * test Referee
      */
@@ -23,4 +28,12 @@ public class RefereeTest extends TestCase {
         assertEquals(Winner.TIE,referee.getWinner(Moves.SCISSORS,Moves.SCISSORS));
 
     }
+
+    @Test
+    public void testRefereeNullArgument() {
+        Referee referee= new Referee();
+        exception.expect(IllegalArgumentException.class);
+        referee.getWinner(null,Moves.ROCK);
+    }
+
 }

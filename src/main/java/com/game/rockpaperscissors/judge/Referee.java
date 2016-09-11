@@ -5,6 +5,9 @@ package com.game.rockpaperscissors.judge;
  */
 public class Referee {
     public synchronized Winner getWinner(Moves playerAMove, Moves playerBMove) {
+        if(playerAMove==null || playerBMove==null){
+            throw new IllegalArgumentException("moves of players can not be null");
+        }
         if(playerAMove.equals(playerBMove)){
             return Winner.TIE;
         }
@@ -13,6 +16,6 @@ public class Referee {
             case ROCK: return playerBMove.equals(Moves.SCISSORS) ? Winner.PLAYERA: Winner.PLAYERB;
             case SCISSORS: return playerBMove.equals(Moves.PAPER) ? Winner.PLAYERA: Winner.PLAYERB;
         }
-        throw new RuntimeException("unknown condition to decide for the referee:"+playerAMove.name()+";"+playerBMove.name());
+        throw new IllegalArgumentException("unknown condition to decide for the referee:"+playerAMove.name()+";"+playerBMove.name());
     }
 }

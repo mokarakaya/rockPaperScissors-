@@ -1,5 +1,6 @@
 package com.game.rockpaperscissors.game;
 
+import com.game.rockpaperscissors.game.player.Player;
 import com.game.rockpaperscissors.judge.Moves;
 import com.game.rockpaperscissors.strategy.PaperStrategy;
 import com.game.rockpaperscissors.strategy.RandomStrategy;

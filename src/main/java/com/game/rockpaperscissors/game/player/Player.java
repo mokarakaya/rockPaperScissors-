@@ -1,4 +1,4 @@
-package com.game.rockpaperscissors.game;
+package com.game.rockpaperscissors.game.player;
 
 import com.game.rockpaperscissors.judge.Moves;
 import com.game.rockpaperscissors.strategy.IStrategy;
@@ -12,7 +12,7 @@ public class Player {
     public Player(IStrategy strategy) {
         this.strategy = strategy;
     }
-    public Moves makeMove(){
+    public synchronized Moves makeMove(){
         return strategy.makeMove();
     }
 }

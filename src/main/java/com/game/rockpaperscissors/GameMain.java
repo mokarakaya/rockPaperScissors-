@@ -7,7 +7,7 @@ import com.game.rockpaperscissors.strategy.PaperStrategy;
 import com.game.rockpaperscissors.strategy.RandomStrategy;
 
 /**
- * Created by 212457624 on 05.09.2016.
+ * Created by mokarakaya on 05.09.2016.
  */
 public class GameMain {
     public static void main(String[] args) throws InterruptedException {

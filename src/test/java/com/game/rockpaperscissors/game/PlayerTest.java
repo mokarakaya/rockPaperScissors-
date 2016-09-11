@@ -10,7 +10,7 @@ import junit.framework.TestCase;
 import java.util.*;
 
 /**
- * Created by 212457624 on 10.09.2016.
+ * Created by mokarakaya on 10.09.2016.
  */
 public class PlayerTest extends TestCase {
 

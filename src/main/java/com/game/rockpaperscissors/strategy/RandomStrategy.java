@@ -5,7 +5,7 @@ import com.game.rockpaperscissors.judge.Moves;
 import java.util.Random;
 
 /**
- * Created by 212457624 on 05.09.2016.
+ * Created by mokarakaya on 05.09.2016.
  */
 public class RandomStrategy implements IStrategy {
 

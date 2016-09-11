@@ -1,7 +1,7 @@
 package com.game.rockpaperscissors.judge;
 
 /**
- * Created by 212457624 on 05.09.2016.
+ * Created by mokarakaya on 05.09.2016.
  */
 public class Referee {
     public Winner getWinner(Moves playerAMove, Moves playerBMove) {

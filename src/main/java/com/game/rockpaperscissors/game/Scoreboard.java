@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * Created by 212457624 on 05.09.2016.
+ * Created by mokarakaya on 05.09.2016.
  */
 public class Scoreboard {
     private volatile Map<Winner,Integer> board;
@@ -21,5 +21,8 @@ public class Scoreboard {
         System.out.println(board.get(Winner.PLAYERA));
         System.out.println(board.get(Winner.PLAYERB));
         System.out.println(board.get(Winner.TIE));
+    }
+    public Map<Winner,Integer> getBoard(){
+        return board;
     }
 }
